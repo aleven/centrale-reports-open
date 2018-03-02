@@ -10,7 +10,7 @@ Le configurazioni delle connessione JDBC sono gestite in web.xml.
 Esiste una configurazione predefinita che può essere utilizzata come Connessione per tutti i report.
 E' possibile speficiare configurazioni aggiuntive specifiche ed utilizzare il parmatro **conn=X** per specificare quale configurazione usare per il report che ne richiede una di specifica.
 
-## Configurazione PDF differenziati per stesso Report
+## Configurazione PDF multipli per stesso Report
 
 Per ogni report è possibile specificare un parametro **tipo=TIPOESEMPIO** in modo che per lo stesso report vengano generati più PDF ed allegati alla stessa email.
 Utile se per lo stesso report ad esempio si vuole generare un PDF per ogni tipo di Prodotto (nota: il tipo poi deve essere gestito internamente nel report per applicare il "filtro dati" corretto)
