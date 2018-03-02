@@ -19,6 +19,17 @@ Utile se per lo stesso report ad esempio si vuole generare un PDF per ogni tipo 
 
 E' possibile configurare dei profili richiamabili con il parametro **profilo=NOMEPROFILO** in modo che la configurazione venga caricata da database (vedi configurazione JPA) ed non attraverso i parametri query string della servlet
 
-## Esempio Configurazione CRON
+## Esempio Configurazione CRON / URL
 
-	wget -t 1 -q "http://server:8080/centralereport/Genera?report=test&tipo=GRUPPO1&to=email@dominio.it"
+Generazione PDF ed invia via Email
+
+	wget -t 1 -q "http://server:8080/centralereport/Genera?report=test&to=email@dominio.it"
+
+Anteprima PDF
+
+	wget -t 1 -q "http://server:8080/centralereport/Genera?report=test"
+	
+Generazione PDF del Report differenziati per TIPO1 e TIPO2 ed invia via email
+
+	wget -t 1 -q "http://server:8080/centralereport/Genera?report=test&tipo=TIPO1,TIPO2&to=email@dominio.it"
+	
