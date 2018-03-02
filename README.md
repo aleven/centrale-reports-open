@@ -1,5 +1,9 @@
 # centrale-reports-open
 
+## Configurazione EMAIL
+
+Le configurazioni Email sono gestite in web.xml.
+
 ## Configurazione Connessione DB per Report
 
 Le configurazioni delle connessione JDBC sono gestite in web.xml.
