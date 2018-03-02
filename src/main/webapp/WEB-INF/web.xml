@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>CentraleReport</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<context-param>
+		<description></description>
+		<param-name>path_reports</param-name>
+		<param-value>/reports</param-value>
+	</context-param>
+	<context-param>
+		<description></description>
+		<param-name>email_subject</param-name>
+		<param-value>CentraleReport</param-value>
+	</context-param>
+	<context-param>
+		<description></description>
+		<param-name>email_server</param-name>
+		<param-value>MY_SMTP_SERVER</param-value>
+	</context-param>
+	<context-param>
+		<description></description>
+		<param-name>email_from</param-name>
+		<param-value>me@mydomain.com</param-value>
+	</context-param>
+	<context-param>
+		<description></description>
+		<param-name>email_sender</param-name>
+		<param-value>MY_NAME</param-value>
+	</context-param>
+	<context-param>
+		<description></description>
+		<param-name>email_username</param-name>
+		<param-value></param-value>
+	</context-param>
+	<context-param>
+		<description></description>
+		<param-name>email_password</param-name>
+		<param-value></param-value>
+	</context-param>
+	
+	<!-- DEFAULT JASPER REPORT CONNECTION STING PARAMETERS -->
+	<context-param>
+		<description>connectionStringDriver</description>
+		<param-name>connectionStringDriver</param-name>
+		<param-value></param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringURL</description>
+		<param-name>connectionStringURL</param-name>
+		<param-value></param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringUserName</description>
+		<param-name>connectionStringUserName</param-name>
+		<param-value></param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringPassword</description>
+		<param-name>connectionStringPassword</param-name>
+		<param-value></param-value>
+	</context-param>
+	
+	<!-- OPTIONALS CONNECTIONS CONFIGURATIONS -->
+	<!-- CONNECTION NUM 1 -->
+	<!-- 
+	<context-param>
+		<description>connectionStringDriver1</description>
+		<param-name>connectionStringDriver1</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringURL1</description>
+		<param-name>connectionStringURL1</param-name>
+		<param-value>jdbc:mysql://mysq_server/</param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringUserName1</description>
+		<param-name>connectionStringUserName1</param-name>
+		<param-value>user</param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringPassword1</description>
+		<param-name>connectionStringPassword1</param-name>
+		<param-value>password</param-value>
+	</context-param>
+	 -->
+	<!-- CONNECTION NUM 2 -->
+	<!-- 
+	<context-param>
+		<description>connectionStringDriver2</description>
+		<param-name>connectionStringDriver2</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringURL2</description>
+		<param-name>connectionStringURL2</param-name>
+		<param-value>jdbc:mysql:///test</param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringUserName2</description>
+		<param-name>connectionStringUserName2</param-name>
+		<param-value>user</param-value>
+	</context-param>
+	<context-param>
+		<description>connectionStringPassword2</description>
+		<param-name>connectionStringPassword2</param-name>
+		<param-value>password</param-value>
+	</context-param>
+ 	-->
+ 	
+ 	<servlet>
+		<servlet-name>Genera</servlet-name>
+		<servlet-class>it.aleven.centralereportopen.Genera</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Genera</servlet-name>
+		<url-pattern>/Genera</url-pattern>
+	</servlet-mapping>
+	
+	
+    <!-- ABILITAZIONE REST SERVER -->
+    <!--
+    <servlet>
+        <servlet-name>Jersey Web Application</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>it.aleven.centralereportopen.rest</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Jersey Web Application</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+	-->
+	
+</web-app>
