@@ -1,5 +1,7 @@
 # centrale-reports-open
 
+webapp per la generazione di anteprime PDF ed invio via EMAIL di reports Jasper Reports
+
 ## Configurazione EMAIL
 
 Le configurazioni Email sono gestite in web.xml.
