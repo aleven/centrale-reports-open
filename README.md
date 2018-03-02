@@ -33,3 +33,7 @@ Generazione PDF del Report differenziati per TIPO1 e TIPO2 ed invia via email
 
 	wget -t 1 -q "http://server:8080/centralereport/Genera?report=test&tipo=TIPO1,TIPO2&to=email@dominio.it"
 	
+Utilizza la configurazione da uno dei Profili pre-configurati su database
+
+	wget -t 1 -q "http://server:8080/centralereport/Genera?profilo=NOMEPROFILO"
+	
